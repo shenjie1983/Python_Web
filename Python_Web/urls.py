@@ -1,3 +1,11 @@
+'''
+@Descripttion: 
+@version: 0.1
+@Author: 沈洁
+@Date: 2020-05-21 13:15:01
+@LastEditors: 沈洁
+@LastEditTime: 2020-07-28 14:35:00
+'''
 """Python_Web URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -13,9 +21,15 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
+
 from django.contrib import admin
 from django.urls import path
-
+from firstWEB import views
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # path('index/', views.index)
+    path('', views.index),
+    path('calpage/', views.CalPage),
+    path('cal', views.Cal)
 ]
